@@ -1,0 +1,12 @@
+{
+    "author_name": "John Doe",
+    "author_email": "johndoe@myorganization.com",
+    "group_id": "pt.up.fc.dcc.asura",
+    "game_name": "Awesome Game",
+    "game_classname": "{{ cookiecutter.game_name|replace(' ', '')|replace('-', '')|replace('_', '') }}",
+    "game_slug": "{{ cookiecutter.game_name|lower()|replace(' ', '-') }}",
+    "game_package_name": "{{ cookiecutter.game_classname|lower }}",
+    "game_package": "{{ cookiecutter.group_id|lower|replace('-', '.')|replace('_', '.')|replace(' ', '.') }}.{{ cookiecutter.game_package_name }}",
+    "game_package_dir": "{{ cookiecutter.game_package|replace('.', '/') }}",
+    "game_version": "0.0.1"
+}
